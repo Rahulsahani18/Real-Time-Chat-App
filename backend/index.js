@@ -38,13 +38,13 @@ app.use('/api/v1/user', userRoute);
 app.use('/api/v1/message', messageRoute);
 
 // ==== Serve Frontend (Production) ====
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   const frontendPath = path.join(__dirname, '../frontend/dist');
   app.use(express.static(frontendPath));
   app.get('*', (req, res) => {
     res.sendFile(path.join(frontendPath, 'index.html'));
   });
-}
+// }
 
 // ==== Socket.io setup ====
 const server = http.createServer(app);
