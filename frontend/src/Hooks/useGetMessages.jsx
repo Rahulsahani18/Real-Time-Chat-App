@@ -12,7 +12,7 @@ const useGetMessages = () => {
 
         const fetchMessages = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/v1/message/${selectedUser._id}`, {
+                const response = await axios.get(`/api/v1/message/${selectedUser._id}`, {
                     withCredentials: true,
                 });
                     console.log('Fetched messages:', response.data);
