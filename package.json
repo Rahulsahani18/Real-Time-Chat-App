@@ -5,11 +5,12 @@
   "main": "index.js",
   "private": true,
  "scripts": {
+  "build": "npm install --prefix frontend && npm run build --prefix frontend",
   "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
   "install-all": "npm-run-all --parallel install:*",
   "install:backend": "npm install --prefix backend",
-  "install:frontend": "npm install --prefix frontend",
-  "build": "npm run build --prefix frontend"
+  "install:frontend": "npm install --prefix frontend"
+  
 },
   "keywords": [],
   "author": "",
