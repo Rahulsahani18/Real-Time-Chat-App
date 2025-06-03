@@ -22,7 +22,7 @@ const Signup = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/user/register', user, {
+      const response = await axios.post('/api/v1/user/register', user, {
         headers: {
           'Content-Type': 'application/json'
         },
